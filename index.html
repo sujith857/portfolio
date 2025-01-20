@@ -1,117 +1,102 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-     
+        <script>
+            function toggleForm() {
+                const form = document.getElementById('signupForm');
+                if (form.style.display === 'block') {
+                    form.style.display = 'none';
+                } else {
+                    form.style.display = 'block';
+                    form.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="container">
             <header>
-                <img src="img/logo.png" alt="Header Logo">
+                <img src="img/logo.png" class="logo" alt="Header Logo">
                 <nav>
                     <ul>
-                        <li><a href="header_1">header link one</a></li>
-                        <li><a href="header_2">header link two</a></li>
-                        <li><a href="header_3">header link three</a></li>
+                        <li>Ready</li>
+                        <li><a href="#section_one">1</a></li>
+                        <li><a href="#section_two">2</a></li>
+                        <li><a href="#section_three">3</a></li>
+                        <li>Start</li>
                     </ul>
                 </nav>
             </header>
-            <section class="section_one">
-              
-    
+            <section id="section_one" class="section_one">
                 <article class="sub_section_one">
-                    <span class="span_one">This website is awesome</span>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-                         obcaecati deleniti, minima consectetur doloremque accusamus quae
-                          necessitatibus dolore repellendus pariatur voluptatem !</p>
-                          <button class="btn_1">Sign up</button>
-                    </article>
+
+                    <span class="span_one">Welcome to My Portfolio</span>
+                    <h1>Hi, I'm Sujith Kumar,</h1>
+                    <p>I am a passionate developer dedicated to creating innovative solutions that enhance user experiences.
+                     I work as Senior Fullstack developer in Synrgise with 8+ years of experience in web development.</p>
+                    <!-- <button class="btn_1" onclick="toggleForm()">Sign up</button> -->
+                </article>
                 <article class="sub_section_two">
                     <img src="img/header_image.png" alt="this is a placeholder for an image">
-    
                 </article>
             </section>
-            <section class="section_two">
+            <section id="section_two" class="section_two">
                 <span class="span_two">Some random information</span>
                 <div class="sub_section_three">
                     <div class="section_two_small">
-                        <div class="section_two_rectangle">
-
-                            </div>
-                            <p>
-                                this is some subtext under an illustration or image
-                            </p>
-                         
-
-
+                        <div class="section_two_rectangle"></div>
+                        <p>Here are some of my recent projects that showcase my skills and creativity.</p>
                     </div>
                     <div class="section_two_small">
-                        <div class="section_two_rectangle">
-
-                        </div>
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                     
-
+                        <div class="section_two_rectangle"></div>
+                        <p>Here are some of my recent projects that showcase my skills and creativity.</p>
                     </div>
                     <div class="section_two_small">
-                        <div class="section_two_rectangle">
-
-                        </div>
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                     
-
+                        <div class="section_two_rectangle"></div>
+                        <p>Here are some of my recent projects that showcase my skills and creativity.</p>
                     </div>
                     <div class="section_two_small">
-                        <div class="section_two_rectangle">
-
-                        </div>
-                        <p>
-                            this is some subtext under an illustration or image
-                        </p>
-                     
-
+                        <div class="section_two_rectangle"></div>
+                        <p>Here are some of my recent projects that showcase my skills and creativity.</p>
                     </div>
-
                 </div>
-    
-          
             </section>
-
-            <section class="section_three">
-              
-    
+            <section id="section_three" class="section_three">
                 <article class="sub_section_four">
-                
-                    <em>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate at id, iure totam nesciunt amet deserunt aperiam asperiores assumenda provident nobis. Vero, sunt dolorem. Molestiae explicabo voluptatum doloremque voluptas.
-                    </em>
-                    <strong>- Thor,God of Thunder</strong>
+                    <em>"The only way to do great work is to love what you do."</em>
+                    <strong>– Steve Jobs</strong>
                 </article>
             </section>
             <section class="section_four">
-              
-    
                 <article class="sub_section_five">
                     <div class="sub_section_six">
-                        <span class="span_three">Call to action!It's time!</span>
-                        <p>Sign up for our productivity by clicking that button right over there! </p>
+                        <span class="span_three">Join me on this journey of innovation and creativity!</span>
+                        <p>Let's collaborate on your next project.</p>
                     </div>
-
-                 <button class="btn_2">Sign up</button>  
+                    <button class="btn_2" onclick="toggleForm()">Sign up</button>  
                 </article>
-                 
+            </section>
+            <section class="section_five" id="signupForm" style="display:none;">
+                <h2>Sign Up</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+              
             </section>
             <footer>
-    copyright c The Odin Project 2021
+                copyright c The Odin Project 2021
             </footer>
         </div>
-       
-
     </body>
 </html>
